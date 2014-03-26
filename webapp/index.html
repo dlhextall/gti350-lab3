@@ -7,6 +7,7 @@
         <title>PHOTOZ</title>       
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="recherche/style.css"/>
 		<script src="js/modernizr.custom.70736.js"></script>
 		<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
 		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
@@ -20,10 +21,21 @@
             </div><!--/ Codrops top bar -->
 			
 			<div class="main">
-				<header class="clearfix">					
-						<div id="logo">
-							<img src="images/logo/logo.jpg" alt="img03"/>
-						</div>
+				<header class="clearfix">
+
+					<div id="logo">
+						<img src="images/logo/logo.jpg" alt="img03"/>
+					</div>
+
+					<div id="page">   
+					    <form id="searchForm" method="post">
+							<fieldset>					        
+					           	<input id="s" type="text" />					            
+					            <input type="submit" value="Submit" id="submitButton" />
+					        </fieldset>
+					    </form>
+					</div>
+
 					<div class="support-note">
 						<span class="note-ie">Sorry, only modern browsers.</span>
 					</div>
@@ -85,48 +97,48 @@
 						<li>
 							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
 								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
+								<div data-src="images/large/5.jpg" data-min-width="1300"></div>
+								<div data-src="images/large/5.jpg" data-min-width="1000"></div>
+								<div data-src="images/large/5.jpg" data-min-width="700"></div>
+								<div data-src="images/large/5.jpg" data-min-width="300"></div>
+								<div data-src="images/large/5.jpg" data-min-width="200"></div>
+								<div data-src="images/large/5.jpg" data-min-width="140"></div>
+								<div data-src="images/large/5.jpg"></div>
 								
 								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
+									<img src="images/large/5.jpg" alt="img03"/>
 								</noscript>
 							</div>
 						</li>
 						<li>
 							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
 								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
+								<div data-src="images/large/6.jpg" data-min-width="1300"></div>
+								<div data-src="images/large/6.jpg" data-min-width="1000"></div>
+								<div data-src="images/large/6.jpg" data-min-width="700"></div>
+								<div data-src="images/large/6.jpg" data-min-width="300"></div>
+								<div data-src="images/large/6.jpg" data-min-width="200"></div>
+								<div data-src="images/large/6.jpg" data-min-width="140"></div>
+								<div data-src="images/large/6.jpg"></div>
 								
 								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
+									<img src="images/large/6.jpg" alt="img03"/>
 								</noscript>
 							</div>
 						</li>
 						<li>
 							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
 								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
+								<div data-src="images/large/7.jpg" data-min-width="1300"></div>
+								<div data-src="images/large/7.jpg" data-min-width="1000"></div>
+								<div data-src="images/large/7.jpg" data-min-width="700"></div>
+								<div data-src="images/large/7.jpg" data-min-width="300"></div>
+								<div data-src="images/large/7.jpg" data-min-width="200"></div>
+								<div data-src="images/large/7.jpg" data-min-width="140"></div>
+								<div data-src="images/large/7.jpg"></div>
 								
 								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
+									<img src="images/large/7.jpg" alt="img03"/>
 								</noscript>
 							</div>
 						</li>
@@ -373,7 +385,9 @@
 		<script src="js/js-url.min.js"></script>
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/gamma.js"></script>
+		<script src="js/RecherheScript.js"></script>
 		<script type="text/javascript">
+
 			
 			$(function() {
 

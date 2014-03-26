@@ -33,6 +33,12 @@ body {
     overflow-x: hidden;
 }
 
+#search{
+	margin:0 auto;	
+	text-align: center;
+	margin-top: 20px;
+}
+
 #logo{
 	margin:0 auto;	
 	width:226px;
