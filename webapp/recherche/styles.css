@@ -12,7 +12,7 @@ body{
 
 #page{
 	/* The main container div */
-	width:480px;
+	width:468px;
 	margin:0px auto 20px;
 }
 
@@ -54,7 +54,7 @@ fieldset{
 	font-size:15px;
 	height:36px;
 	line-height:36px;
-	margin-right:12px;
+	margin-right:0px;
 	outline:medium none;
 	padding:0 0 0 35px;
 	text-shadow:1px 1px 0 white;
