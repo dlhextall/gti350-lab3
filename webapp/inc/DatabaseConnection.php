@@ -5,7 +5,7 @@
 class DatabaseConnection {
 
     private $dsn = 'pgsql:dbname=d9818fb3j9mm9c;host=ec2-23-23-81-171.compute-1.amazonaws.com';
-    private $user = 'jspylgjuvfppodc';
+    private $user = 'jspylguvfppodc';
     private $password = 'xcPKKb3AlhR8PhaBCNZ2S8JYNj';
 
     private static $instance, $dbh;
