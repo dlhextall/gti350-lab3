@@ -1,3 +1,12 @@
+<?php
+
+require_once 'inc/DatabaseConnection.php';
+require_once 'inc/secure_functions.php';
+sec_session_start();
+$dbh = DatabaseConnection::singleton();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
