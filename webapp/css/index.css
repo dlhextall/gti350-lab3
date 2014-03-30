@@ -70,6 +70,6 @@
 	animation-name: bounce;
 
 	-webkit-animation-duration: 3s;
-	-webkit-animation-delay: 2s;
+	-webkit-animation-delay: 0.2s;
 	-webkit-animation-iteration-count: infinite;
 }
