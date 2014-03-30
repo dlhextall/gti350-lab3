@@ -45,6 +45,21 @@ body {
 	height:177px;
 }
 
+#lien:visited{
+	border-bottom: 0px;
+	text-decoration:none
+}
+
+#lien:hover{
+	text-decoration:none;
+	border-bottom: 0px;
+}
+
+#lien{
+	text-decoration:none;
+	border-bottom: 0px;
+}
+
 footer {
     background-color: #3E606F;
     width: 100%;

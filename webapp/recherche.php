@@ -16,12 +16,9 @@ $dbh = DatabaseConnection::singleton();
         <title>PHOTOZ</title>       
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/index.css"/>
         <link rel="stylesheet" type="text/css" href="recherche/styles.css"/>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<script src="js/modernizr.custom.70736.js"></script>
-
-
 		<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
 		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
     </head>
@@ -37,7 +34,9 @@ $dbh = DatabaseConnection::singleton();
 				<header class="clearfix">
 
 					<div id="logo">
-						<img src="images/logo/logo.jpg" alt="img03"/>
+						<a id="lien" href="index.php">
+							<img src="images/logo/logo.jpg" alt="img03"/>
+						</a>
 					</div>					
 
 					<div class="support-note">
@@ -45,17 +44,11 @@ $dbh = DatabaseConnection::singleton();
 					</div>
 					
 				</header>
-				<div id="over">
-					<div id="scroll_down">
-						<a id="scrollLink" href="#">
-							<img src="images/scrollicon.png" alt="scroll">
-						</a>
-					</div>
-				</div>
+				
 				<div class="gamma-container gamma-loading" id="gamma-container">
 					
 					<div id="page">   
-					    <form  action="recherche.php" method="post">
+					    <form  method="post">
 							<fieldset>					        
 					           	<input id="s" type="text" />					            
 					            <input type="submit" value="Submit" id="submitButton" />
@@ -196,16 +189,16 @@ $dbh = DatabaseConnection::singleton();
 						<li>
 							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
 								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="1300"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="1000"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="700"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="300"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="200"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="140"></div>
+								<div data-src="images/large/IMAG0372.jpg"></div>
 								
 								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
+									<img src="images/large/IMAG0372.jpg" alt="img03"/>
 								</noscript>
 							</div>
 						</li>
@@ -228,16 +221,16 @@ $dbh = DatabaseConnection::singleton();
 						<li>
 							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
 								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
+								<div data-src="images/large/IMAG0373.jpg" data-min-width="1300"></div>
+								<div data-src="images/large/IMAG0373.jpg" data-min-width="1000"></div>
+								<div data-src="images/large/IMAG0373.jpg" data-min-width="700"></div>
+								<div data-src="images/large/IMAG0373.jpg" data-min-width="300"></div>
+								<div data-src="images/large/IMAG0373.jpg" data-min-width="200"></div>
+								<div data-src="images/large/IMAG0373.jpg" data-min-width="140"></div>
+								<div data-src="images/large/IMAG0373.jpg"></div>
 								
 								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
+									<img src="images/large/IMAG0373.jpg" alt="img03"/>
 								</noscript>
 							</div>
 						</li>
@@ -389,7 +382,7 @@ $dbh = DatabaseConnection::singleton();
 
 					<div class="gamma-overlay"></div>
 
-					
+					<div id="loadmore" class="loadmore">Plus de résultats</div>
 
 				</div>
 
@@ -405,7 +398,6 @@ $dbh = DatabaseConnection::singleton();
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/gamma.js"></script>
 		<script src="js/RechercheScript.js"></script>
-		<script src="js/scroll.js"></script>
 		<script type="text/javascript">
 
 			
