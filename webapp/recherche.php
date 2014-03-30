@@ -5,9 +5,7 @@ require_once 'inc/secure_functions.php';
 sec_session_start();
 $dbh = DatabaseConnection::singleton();
 
-$stmt = $dbh->get()->prepare("SELECT * FROM photo");
-$stmt->execute();
-$images = $stmt->fetchAll(PDO::FETCH_CLASS);
+
 
 ?>
 <!DOCTYPE html>
@@ -51,39 +49,61 @@ $images = $stmt->fetchAll(PDO::FETCH_CLASS);
 				<div class="gamma-container gamma-loading" id="gamma-container">
 					
 					<div id="page">   
-					    <form  method="post">
+					    <form  action ="recherche.php" method="post">
 							<fieldset>					        
-					           	<input id="s" type="text" />					            
+					           	<input id="s" name="search" type="text" />					            
 					            <input type="submit" value="Submit" id="submitButton" />
 					        </fieldset>
 					    </form>
+					    <?php 
+					    	$input = $_POST["search"]; 
+							if ($input == "") {
+								echo "<p><h3>Veuilez entrez un terme de recherche</h3>"; 
+							}
+						?>
 					</div>
 
 					<ul class="gamma-gallery">
 
-						<?php 
+						<?php 													
 
-						foreach ($images as $image) {
-								$html = '<li>';
-								$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
-								$html.= '<div data-src="'.$image->p_url.'" data-min-width="1300"></div>';
-								$html.= '<div data-src="'.$image->p_url.'" data-min-width="1000"></div>';
-								$html.= '<div data-src="'.$image->p_url.'" data-min-width="700"></div>';
-								$html.= '<div data-src="'.$image->p_url.'" data-min-width="300"></div>';
-								$html.= '<div data-src="'.$image->p_url.'" data-min-width="200"></div>';
-								$html.= '<div data-src="'.$image->p_url.'" data-min-width="140"></div>';
-								$html.= '<div data-src="'.$image->p_url.'"></div>';
-								$html.= '<noscript><img src="'.$image->p_url.'" alt="img03"/></noscript>';
-								$html.= '</li>';
+							if(!$input == ""){
+								$input = strip_tags( $input ); 
+								$input = mysql_real_escape_string( $input ); 
+								$input = trim( $input );
 
-								echo $html;
+								$stmt = $dbh->get()->prepare("SELECT * FROM photo WHERE LOWER(p_tags) LIKE '%$input%' OR LOWER(p_description) LIKE '%$input%'");
+								$stmt->execute();
+								$images = $stmt->fetchAll(PDO::FETCH_CLASS);
 
-						}?>
+								
+								foreach ($images as $image) {
+									$html = '<li>';
+									$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
+									$html.= '<div data-src="'.$image->p_url.'" data-min-width="1300"></div>';
+									$html.= '<div data-src="'.$image->p_url.'" data-min-width="1000"></div>';
+									$html.= '<div data-src="'.$image->p_url.'" data-min-width="700"></div>';
+									$html.= '<div data-src="'.$image->p_url.'" data-min-width="300"></div>';
+									$html.= '<div data-src="'.$image->p_url.'" data-min-width="200"></div>';
+									$html.= '<div data-src="'.$image->p_url.'" data-min-width="140"></div>';
+									$html.= '<div data-src="'.$image->p_url.'"></div>';
+									$html.= '<noscript><img src="'.$image->p_url.'" alt="img03"/></noscript>';
+									$html.= '</li>';
+
+									echo $html;
+								}
+
+							}
+						?>
 					</ul>
 
 					<div class="gamma-overlay"></div>
 
-					<div id="loadmore" class="loadmore">Plus de résultats</div>
+					<?php 					    	
+						if (!$input == "") {
+							echo '<div id="loadmore" class="loadmore">Plus de résultats</div>'; 
+						}
+					?>
 
 				</div>
 

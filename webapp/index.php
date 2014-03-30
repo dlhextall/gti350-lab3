@@ -61,8 +61,8 @@ $images = $stmt->fetchAll(PDO::FETCH_CLASS);
 					<div id="page">   
 					    <form  action="recherche.php" method="post">
 							<fieldset>					        
-					           	<input id="s" type="text" />					            
-					            <input type="submit" value="Submit" id="submitButton" />
+					           	<input id="s" name="search" type="text" />					            
+					            <input type="submit" value="Submit"  id="submitButton" />
 					        </fieldset>
 					    </form>
 					</div>
