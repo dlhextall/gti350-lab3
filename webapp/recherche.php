@@ -389,7 +389,7 @@ $dbh = DatabaseConnection::singleton();
 			</div><!--/main-->
 		</div>
 		<footer>
-			Tous droits réserver PHOTOZ 2014
+			Tous droits réserver PHOTOZ 2014 ©
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="js/jquery.masonry.min.js"></script>

@@ -45,8 +45,8 @@ $dbh = DatabaseConnection::singleton();
 					</div>
 					
 				</header>
-				<div id="over">
-					<div id="scroll_down">
+				<div id="over" class="bounce">
+					<div id="scroll_down" >
 						<a id="scrollLink" href="#">
 							<img src="images/scrollicon.png" alt="scroll">
 						</a>
@@ -180,32 +180,32 @@ $dbh = DatabaseConnection::singleton();
 						<li>
 							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
 								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="1300"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="1000"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="700"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="300"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="200"></div>
+								<div data-src="images/large/IMAG0372.jpg" data-min-width="140"></div>
+								<div data-src="images/large/IMAG0372.jpg"></div>
 								
 								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
+									<img src="images/large/IMAG0372.jpg" alt="img03"/>
 								</noscript>
 							</div>
 						</li>
 						<li>
 							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
 								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
+								<div data-src="images/large/7.jpg" data-min-width="1300"></div>
+								<div data-src="images/large/7.jpg" data-min-width="1000"></div>
+								<div data-src="images/large/7.jpg" data-min-width="700"></div>
+								<div data-src="images/large/7.jpg" data-min-width="300"></div>
+								<div data-src="images/large/7.jpg" data-min-width="200"></div>
+								<div data-src="images/large/7.jpg" data-min-width="140"></div>
+								<div data-src="images/large/7.jpg"></div>
 								
 								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
+									<img src="images/large/7.jpg" alt="img03"/>
 								</noscript>
 							</div>
 						</li>
@@ -228,163 +228,20 @@ $dbh = DatabaseConnection::singleton();
 						<li>
 							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
 								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
+								<div data-src="images/large/8.jpg" data-min-width="1300"></div>
+								<div data-src="images/large/8.jpg" data-min-width="1000"></div>
+								<div data-src="images/large/8.jpg" data-min-width="700"></div>
+								<div data-src="images/large/8.jpg" data-min-width="300"></div>
+								<div data-src="images/large/8.jpg" data-min-width="200"></div>
+								<div data-src="images/large/8.jpg" data-min-width="140"></div>
+								<div data-src="images/large/8.jpg"></div>
 								
 								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
+									<img src="images/large/8.jpg" alt="img03"/>
 								</noscript>
 							</div>
 						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
-						<li>
-							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-								
-								<div data-src="images/large/3.jpg" data-min-width="1300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="1000"></div>
-								<div data-src="images/large/3.jpg" data-min-width="700"></div>
-								<div data-src="images/large/3.jpg" data-min-width="300"></div>
-								<div data-src="images/large/3.jpg" data-min-width="200"></div>
-								<div data-src="images/large/3.jpg" data-min-width="140"></div>
-								<div data-src="images/large/3.jpg"></div>
-								
-								<noscript>
-									<img src="images/large/3.jpg" alt="img03"/>
-								</noscript>
-							</div>
-						</li>
+						
 					</ul>
 
 					<div class="gamma-overlay"></div>
@@ -396,7 +253,7 @@ $dbh = DatabaseConnection::singleton();
 			</div><!--/main-->
 		</div>
 		<footer>
-			Tous droits réserver PHOTOZ 2014
+			Tous droits réserver PHOTOZ 2014 ©
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="js/jquery.masonry.min.js"></script>
