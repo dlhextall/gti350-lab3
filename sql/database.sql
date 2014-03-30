@@ -4,7 +4,8 @@ CREATE TABLE App_User (
     u_name text NOT NULL,
     u_email text NOT NULL,
     u_password varchar(128) NOT NULL,
-    u_salt varchar(128) NOT NULL
+    u_salt varchar(128) NOT NULL,
+    u_profile_picture varchar(256)
 );
 
 CREATE TABLE Login_Attempt (
