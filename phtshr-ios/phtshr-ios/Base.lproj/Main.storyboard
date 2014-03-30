@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="jFF-9X-J3r">
             <objects>
-                <viewController storyboardIdentifier="homeView" id="gkJ-ZJ-ZsS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeView" id="gkJ-ZJ-ZsS" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p3O-qt-PMi"/>
                         <viewControllerLayoutGuide type="bottom" id="cIs-bq-pE3"/>
@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="779" y="326"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="86A-B0-0WQ">
             <objects>
-                <viewController storyboardIdentifier="profileView" id="ygP-6E-uos" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileView" id="ygP-6E-uos" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8S6-2c-Ox8"/>
                         <viewControllerLayoutGuide type="bottom" id="YyJ-Kz-qv1"/>
@@ -129,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prénom Nom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boe-po-eDy">
-                                <rect key="frame" x="20" y="31" width="102" height="21"/>
+                                <rect key="frame" x="20" y="31" width="178" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -162,7 +162,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UdE-xP-6qh">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UdE-xP-6qh" customClass="MyPhotoViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -173,9 +173,20 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08V-be-62w">
+                                                    <rect key="frame" x="0.0" y="61" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="image" destination="fo5-n8-R4K" id="MFk-O6-WUw"/>
+                                            <outlet property="imageTitle" destination="08V-be-62w" id="Hyt-gM-8sS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -217,6 +228,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="ProfileIcon" id="FwH-0c-eea"/>
+                    <connections>
+                        <outlet property="email" destination="dVo-bS-Ll6" id="LeU-fp-bGb"/>
+                        <outlet property="profilePicture" destination="Hai-gj-Jry" id="dIm-fY-fV7"/>
+                        <outlet property="username" destination="boe-po-eDy" id="BfI-MK-L4K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tx9-q5-5wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

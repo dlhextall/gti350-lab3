@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		39145EA518D1284100D10FB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39145EA318D1284100D10FB9 /* Main.storyboard */; };
+		393048DF18E609F3008C44E9 /* AppUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 393048DE18E609F3008C44E9 /* AppUser.m */; };
+		39420F8518E61F8F004338C5 /* MyPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F8418E61F8F004338C5 /* MyPhoto.m */; };
+		39420F8E18E6255E004338C5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F8D18E6255E004338C5 /* ProfileViewController.m */; };
+		39420F9118E627F0004338C5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F9018E627F0004338C5 /* HomeViewController.m */; };
+		39420F9418E74475004338C5 /* MyPhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F9318E74475004338C5 /* MyPhotoViewCell.m */; };
 		39F7E26E18D1159C00147D9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F7E26D18D1159C00147D9C /* Foundation.framework */; };
 		39F7E27018D1159C00147D9C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F7E26F18D1159C00147D9C /* CoreGraphics.framework */; };
 		39F7E27218D1159C00147D9C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F7E27118D1159C00147D9C /* UIKit.framework */; };
@@ -35,6 +40,16 @@
 
 /* Begin PBXFileReference section */
 		39145EA418D1284100D10FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		393048DD18E609F3008C44E9 /* AppUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUser.h; sourceTree = "<group>"; };
+		393048DE18E609F3008C44E9 /* AppUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUser.m; sourceTree = "<group>"; };
+		39420F8318E61F8F004338C5 /* MyPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPhoto.h; sourceTree = "<group>"; };
+		39420F8418E61F8F004338C5 /* MyPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPhoto.m; sourceTree = "<group>"; };
+		39420F8C18E6255E004338C5 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
+		39420F8D18E6255E004338C5 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		39420F8F18E627F0004338C5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		39420F9018E627F0004338C5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		39420F9218E74475004338C5 /* MyPhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPhotoViewCell.h; sourceTree = "<group>"; };
+		39420F9318E74475004338C5 /* MyPhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPhotoViewCell.m; sourceTree = "<group>"; };
 		39F7E26A18D1159C00147D9C /* phtshr-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "phtshr-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F7E26D18D1159C00147D9C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39F7E26F18D1159C00147D9C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,11 +129,21 @@
 			children = (
 				39F7E27C18D1159C00147D9C /* AppDelegate.h */,
 				39F7E27D18D1159C00147D9C /* AppDelegate.m */,
+				393048DD18E609F3008C44E9 /* AppUser.h */,
+				393048DE18E609F3008C44E9 /* AppUser.m */,
+				39F7E28518D1159C00147D9C /* Images.xcassets */,
+				39145EA318D1284100D10FB9 /* Main.storyboard */,
+				39420F9218E74475004338C5 /* MyPhotoViewCell.h */,
+				39420F9318E74475004338C5 /* MyPhotoViewCell.m */,
+				39420F8318E61F8F004338C5 /* MyPhoto.h */,
+				39420F8418E61F8F004338C5 /* MyPhoto.m */,
+				39420F8C18E6255E004338C5 /* ProfileViewController.h */,
+				39420F8D18E6255E004338C5 /* ProfileViewController.m */,
+				39420F8F18E627F0004338C5 /* HomeViewController.h */,
+				39420F9018E627F0004338C5 /* HomeViewController.m */,
+				39F7E27418D1159C00147D9C /* Supporting Files */,
 				39F7E28218D1159C00147D9C /* ViewController.h */,
 				39F7E28318D1159C00147D9C /* ViewController.m */,
-				39145EA318D1284100D10FB9 /* Main.storyboard */,
-				39F7E28518D1159C00147D9C /* Images.xcassets */,
-				39F7E27418D1159C00147D9C /* Supporting Files */,
 			);
 			path = "phtshr-ios";
 			sourceTree = "<group>";
@@ -196,7 +221,7 @@
 		39F7E26218D1159C00147D9C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "David Lafrance";
 				TargetAttributes = {
 					39F7E28A18D1159C00147D9C = {
@@ -249,9 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39420F8518E61F8F004338C5 /* MyPhoto.m in Sources */,
+				393048DF18E609F3008C44E9 /* AppUser.m in Sources */,
 				39F7E28418D1159C00147D9C /* ViewController.m in Sources */,
 				39F7E27E18D1159C00147D9C /* AppDelegate.m in Sources */,
+				39420F8E18E6255E004338C5 /* ProfileViewController.m in Sources */,
+				39420F9118E627F0004338C5 /* HomeViewController.m in Sources */,
 				39F7E27A18D1159C00147D9C /* main.m in Sources */,
+				39420F9418E74475004338C5 /* MyPhotoViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +335,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -344,7 +373,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -402,7 +430,6 @@
 		39F7E2A018D1159C00147D9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/phtshr-ios.app/phtshr-ios";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -425,7 +452,6 @@
 		39F7E2A118D1159C00147D9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/phtshr-ios.app/phtshr-ios";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

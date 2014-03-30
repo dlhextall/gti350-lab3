@@ -10,4 +10,11 @@
 
 @implementation AppUser
 
+@synthesize lastName;
+@synthesize firstName;
+@synthesize email;
+@synthesize profilePicture;
+@synthesize lstMyFavorites;
+@synthesize lstMyPictures;
+
 @end
