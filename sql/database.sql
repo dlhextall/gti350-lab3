@@ -21,6 +21,19 @@ CREATE TABLE Account_State (
     as_banned boolean NOT NULL DEFAULT false  -- if true, the user is banned permanently, unless an admin grant access again.
 );
 
+CREATE TABLE Photo (
+    p_id SERIAL,
+    p_app_user_id int NOT NULL,
+    p_url varchar(256) NOT NULL,
+    p_tags text,
+    p_description text
+);
+
+CREATE TABLE Favorite_Photo (
+    fp_photo_id int NOT NULL,
+    fp_app_user_id int NOT NULL
+);
+
 CREATE TABLE App_Config (
     ac_id SERIAL,
     ac_index varchar(100) NOT NULL,
