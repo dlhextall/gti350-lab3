@@ -66,7 +66,7 @@ $dbh = DatabaseConnection::singleton();
 					<ul class="gamma-gallery">
 
 						<?php 													
-
+							
 							if($input != ""){
 								$input = strip_tags( $input ); 								 
 								$input = trim( $input );
@@ -76,7 +76,7 @@ $dbh = DatabaseConnection::singleton();
 								$images = $stmt->fetchAll(PDO::FETCH_CLASS);
 								$nbElement = count($images);							
 								
-								if($nbElement !=0){
+								if($nbElement > 0){
 									foreach ($images as $image) {
 										$html = '<li>';
 										$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
@@ -93,6 +93,9 @@ $dbh = DatabaseConnection::singleton();
 										echo $html;
 									}	
 								}
+							}
+							else{
+								$nbElement =0;
 							}
 						?>
 					</ul>

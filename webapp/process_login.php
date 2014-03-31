@@ -10,7 +10,7 @@ if(isset($_POST['email'], $_POST['p'])) {
    $dbh = DatabaseConnection::singleton();
    if(login($email, $password, $dbh->get()) == true) {
       // Login success
-      header('Location: ./test.php');
+      header('Location: ./index.php');
    } else {
       // Login failed
       header('Location: ./index.php?error=' . urlencode("Invalid email address or password."));

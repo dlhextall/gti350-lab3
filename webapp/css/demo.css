@@ -45,6 +45,30 @@ body {
 	height:177px;
 }
 
+#connexion{
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	top :10px;
+	right:10px;
+	float: left;
+}
+
+
+#connexion h3{
+	color:black;
+	 font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+#user_connected{
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	top :10px;
+	right:10px;
+	float: left;
+}
+
 #lien:visited{
 	border-bottom: 0px;
 	text-decoration:none

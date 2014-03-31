@@ -39,7 +39,11 @@ $images = $stmt->fetchAll(PDO::FETCH_CLASS);
 			
 			<div class="main">
 				<header class="clearfix">
-
+					<div id="connexion">
+						<a href="#">
+							<h3>CONNEXION</h3>
+						</a>
+					</div>
 					<div id="logo">
 						<img src="images/logo/logo.jpg" alt="img03"/>
 					</div>					
