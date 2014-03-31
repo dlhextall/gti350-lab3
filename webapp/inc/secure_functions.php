@@ -39,7 +39,7 @@
 	      $stmt->execute(); // Execute the prepared query.
 	      $result = $stmt->fetch(PDO::FETCH_OBJ);
 	      $user_id = $result->u_id;
-	      $username = $result->u_name;
+	      $username = $result->u_last_name;
 	      $db_password = $result->u_password;
 	      $salt = $result->u_salt;
 	      $password = hash('sha512', $password.$salt); // hash the password with the unique salt.
