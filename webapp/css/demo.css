@@ -22,6 +22,70 @@ html { height: 100%; }
     clear: both;
 }
 
+#ze_cont{
+	width: 100%;	
+	clear: both;
+	height: 600px;
+	min-height: 200px;
+	position: relative;
+}
+
+#test{
+	width: 15%;
+	float:left;
+	height: 400px;
+	background-color:#242021;	
+	margin: 34px 20px 100px 20px;
+	min-height: 200px;	
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+
+#mes_photos:hover{
+	cursor: pointer;
+	cursor: hand;
+	background-color: white;
+}
+
+#mes_favoris:hover{
+	cursor: pointer;
+	cursor: hand;
+	background-color: white;
+}
+
+#mes_photos{
+	width: 95%;
+	height: 40px;
+	padding: 10px 10px 0px 10px;
+	margin: 5px 10px 0px 10px;
+	color:#242021;
+	background-color: white;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	font-weight: bold;
+}
+
+#mes_favoris{
+	width: 95%;
+	height: 40px;
+	padding: 10px 0px 0px 10px;
+	margin: 5px 10px 0px 10px;
+	color:#242021;
+	background-color: #354b5e;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	font-weight: bold;
+}
+
+.img_profile{
+	margin: 10px 10px 10px 10px;
+}
+#profile_pic{
+	width:100%;
+    padding: 0px 20px 0px 0px;
+}
+
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     background: #fff;
