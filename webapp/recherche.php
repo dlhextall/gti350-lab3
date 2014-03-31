@@ -58,7 +58,7 @@ $dbh = DatabaseConnection::singleton();
 					    <?php 
 					    	$input = $_POST["search"]; 
 							if ($input == "") {
-								echo "<p><h3>Veuilez entrez un terme de recherche</h3>"; 
+								echo "<p><h3>Veuilez entrez un terme de recherche</h3></p>"; 
 							}
 						?>
 					</div>
@@ -67,40 +67,44 @@ $dbh = DatabaseConnection::singleton();
 
 						<?php 													
 
-							if(!$input == ""){
+							if($input != ""){
 								$input = strip_tags( $input ); 								 
 								$input = trim( $input );
 
 								$stmt = $dbh->get()->prepare("SELECT * FROM photo WHERE LOWER(p_tags) LIKE '%$input%' OR LOWER(p_description) LIKE '%$input%'");
 								$stmt->execute();
 								$images = $stmt->fetchAll(PDO::FETCH_CLASS);
-
+								$nbElement = count($images);							
 								
-								foreach ($images as $image) {
-									$html = '<li>';
-									$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
-									$html.= '<div data-src="'.$image->p_url.'" data-min-width="1300"></div>';
-									$html.= '<div data-src="'.$image->p_url.'" data-min-width="1000"></div>';
-									$html.= '<div data-src="'.$image->p_url.'" data-min-width="700"></div>';
-									$html.= '<div data-src="'.$image->p_url.'" data-min-width="300"></div>';
-									$html.= '<div data-src="'.$image->p_url.'" data-min-width="200"></div>';
-									$html.= '<div data-src="'.$image->p_url.'" data-min-width="140"></div>';
-									$html.= '<div data-src="'.$image->p_url.'"></div>';
-									$html.= '<noscript><img src="'.$image->p_url.'" alt="img03"/></noscript>';
-									$html.= '</li>';
+								if($nbElement !=0){
+									foreach ($images as $image) {
+										$html = '<li>';
+										$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
+										$html.= '<div data-src="'.$image->p_url.'" data-min-width="1300"></div>';
+										$html.= '<div data-src="'.$image->p_url.'" data-min-width="1000"></div>';
+										$html.= '<div data-src="'.$image->p_url.'" data-min-width="700"></div>';
+										$html.= '<div data-src="'.$image->p_url.'" data-min-width="300"></div>';
+										$html.= '<div data-src="'.$image->p_url.'" data-min-width="200"></div>';
+										$html.= '<div data-src="'.$image->p_url.'" data-min-width="140"></div>';
+										$html.= '<div data-src="'.$image->p_url.'"></div>';
+										$html.= '<noscript><img src="'.$image->p_url.'" alt="img03"/></noscript>';
+										$html.= '</li>';
 
-									echo $html;
+										echo $html;
+									}	
 								}
-
 							}
 						?>
 					</ul>
 
 					<div class="gamma-overlay"></div>
 
-					<?php 					    	
-						if (!$input == "") {
-							echo '<div id="loadmore" class="loadmore">Plus de résultats</div>'; 
+					<?php 
+						if( $nbElement== 0){
+									echo "<h3>Auncun résultats</h3>";
+						}					    	
+						if ($input != "") {
+							//echo '<div id="loadmore" class="loadmore">Plus de résultats</div>'; 
 						}
 					?>
 

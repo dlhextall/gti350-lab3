@@ -49,6 +49,7 @@ $images = $stmt->fetchAll(PDO::FETCH_CLASS);
 					</div>
 					
 				</header>
+				
 				<div id="over" class="bounce">
 					<div id="scroll_down" >
 						<a id="scrollLink" href="#">
@@ -92,7 +93,7 @@ $images = $stmt->fetchAll(PDO::FETCH_CLASS);
 												
 					</ul>
 
-					<div class="gamma-overlay"></div>
+					<div id="overLAY" class="gamma-overlay"></div>
 
 					
 
@@ -111,6 +112,8 @@ $images = $stmt->fetchAll(PDO::FETCH_CLASS);
 		<script src="js/gamma.js"></script>
 		<script src="js/RechercheScript.js"></script>
 		<script src="js/scroll.js"></script>
+		<script type="text/javascript" src="js/sha512.js"></script>
+   		<script type="text/javascript" src="js/forms.js"></script>
 		<script type="text/javascript">
 
 			
