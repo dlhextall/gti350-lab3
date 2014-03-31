@@ -34,7 +34,7 @@
 		global $max_tolerate_attempts, $delay_before_login;
 	   // Using prepared Statements means that SQL injection is not possible.
 	   
-	   if ($stmt = $dbcon->prepare("SELECT u_id, u_name, u_password, u_salt FROM app_user WHERE u_email = ? LIMIT 1")) { 
+	   if ($stmt = $dbcon->prepare("SELECT u_id, u_last_name, u_first_name, u_password, u_salt, u_profile_picture FROM app_user WHERE u_email = ? LIMIT 1")) { 
 	      $stmt->bindParam(1, $email, PDO::PARAM_STR); // Bind "$email" to parameter.
 	      $stmt->execute(); // Execute the prepared query.
 	      $result = $stmt->fetch(PDO::FETCH_OBJ);
@@ -167,7 +167,7 @@
 	   // All login attempts are counted from the past 15 minutes. 
 	   
 	   $valid_attempts = $now - ($delay_before_login);
-		$max_tolerate_attempts = 5;
+		$max_tolerate_attempts = 5000;
 		//count = total of brute force
 		$statement = $pdo->query("SELECT count(*) from login_attempt where la_desc = 'brute force attempt'");
 		$result = $statement->fetch(PDO::FETCH_OBJ);

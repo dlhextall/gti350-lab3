@@ -1,7 +1,8 @@
 -- BEGIN Table creation
 CREATE TABLE App_User (
     u_id SERIAL,
-    u_name text NOT NULL,
+    u_last_name varchar(256) NOT NULL,
+    u_first_name varchar(256) NOT NULL,
     u_email text NOT NULL,
     u_password varchar(128) NOT NULL,
     u_salt varchar(128) NOT NULL,
