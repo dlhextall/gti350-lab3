@@ -208,7 +208,7 @@
 	 
 	     $user_browser = $_SERVER['HTTP_USER_AGENT']; // Get the user-agent string of the user.
 	 
-	     if ($stmt = $pdo->prepare("SELECT u_password, u_role_id FROM App_User WHERE u_id = ? LIMIT 1")) { 
+	     if ($stmt = $pdo->prepare("SELECT u_password FROM App_User WHERE u_id = ? LIMIT 1")) { 
 	        $stmt->bindParam(1, $user_id, PDO::PARAM_INT); // Bind "$user_id" to parameter.
 	        $stmt->execute(); // Execute the prepared query.
 	        //$stmt->store_result();
