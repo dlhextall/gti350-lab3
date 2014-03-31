@@ -14,7 +14,7 @@
 @synthesize source;
 @synthesize description;
 
--(id)initWithId:(NSInteger)_photoId source:(NSString *)_source description:(NSString *)_description {
+-(id)initWithId:(NSInteger)_photoId withSource:(NSString *)_source withDescription:(NSString *)_description {
     NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:_source]];
     self = [super initWithData:imageData];
     

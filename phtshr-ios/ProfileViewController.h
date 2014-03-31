@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UILabel *username;
 @property (strong, nonatomic) IBOutlet UILabel *email;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
+@property (nonatomic, strong) NSMutableArray *myPhotos;
 
 @end

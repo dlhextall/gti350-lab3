@@ -10,10 +10,13 @@
 
 @implementation AppUser
 
+@synthesize u_id;
 @synthesize lastName;
 @synthesize firstName;
 @synthesize email;
 @synthesize profilePicture;
+@synthesize passwd;
+@synthesize salt;
 @synthesize lstMyFavorites;
 @synthesize lstMyPictures;
 

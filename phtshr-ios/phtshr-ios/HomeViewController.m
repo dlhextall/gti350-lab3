@@ -7,6 +7,9 @@
 //
 
 #import "HomeViewController.h"
+#import "HomePhotoFeedViewCell.h"
+#import "Webservices.h"
+#import "MyPhoto.h"
 
 @interface HomeViewController ()
 
@@ -27,12 +30,42 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.photoFeed = [Webservices getPhotoFeed];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
+    return [self.photoFeed count];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    HomePhotoFeedViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"homePhotoFeed" forIndexPath:indexPath];
+
+    MyPhoto *currentPhoto = [self.photoFeed objectAtIndex:indexPath.row];
+    cell.image.image = currentPhoto;
+    cell.imageTitle.text = currentPhoto.description;
+    
+    return cell;
+}
+
+- (void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text {
+    NSLog(@"searching...");
+    if (text.length > 0) {
+        self.photoFeed = [Webservices getPhotoFeedWithTags:text];
+    } else {
+        self.photoFeed = [Webservices getPhotoFeed];
+    }
+    
+    
 }
 
 /*

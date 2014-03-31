@@ -9,14 +9,18 @@
 #import "ProfileViewController.h"
 #import "AppUser.h"
 #import "MyPhoto.h"
+#import "MyPhotoViewCell.h"
+#import "Webservices.h"
 
 @interface ProfileViewController ()
 
 @end
 
-@implementation ProfileViewController
+@implementation ProfileViewController {
 
-AppUser *user;
+}
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,23 +35,38 @@ AppUser *user;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    user = [AppUser new];
-    user.lastName = @"Lizard";
-    user.firstName = @"Hehehe";
-    user.email = @"hehehe.lizard@gmail.com";
+    AppUser *userdata = [Webservices login:@"charles.foster.offdensen@dethklok.com" withPassword:@"money"];
+    if (userdata != nil) {
+        self.username.text = [NSString stringWithFormat:@"%@ %@", userdata.firstName, userdata.lastName];
+        self.email.text = userdata.email;
+        self.profilePicture.image = userdata.profilePicture;
+    }
     
-    MyPhoto *photo1 = [[MyPhoto alloc] initWithId: 1 source:@"https://dl.dropboxusercontent.com/u/2308099/photoz/qAe2XKh.jpg" description:@"description example"];
-    [user.lstMyPictures addObject:photo1];
-    
-    self.username.text = [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
-    self.email.text = user.email;
-    self.profilePicture.image = photo1;
+    self.myPhotos = [Webservices getPhotoFeedWithUserId:userdata.u_id];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
+    return [self.myPhotos count];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MyPhotoViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"myPhotosViewCell" forIndexPath:indexPath];
+    
+    MyPhoto *currentPhoto = [self.myPhotos objectAtIndex:indexPath.row];
+    cell.image.image = currentPhoto;
+    cell.imageTitle.text = currentPhoto.description;
+    
+    return cell;
 }
 
 /*

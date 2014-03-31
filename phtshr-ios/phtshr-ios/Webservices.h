@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AppUser.h"
 
 @interface Webservices : NSObject
+
++(NSString *) createSHA512:(NSString *)source;
++(AppUser *) login:(NSString *)_username withPassword:(NSString *)_passwd;
++(NSMutableArray *) getPhotoFeed;
++(NSMutableArray *) getPhotoFeedWithUserId:(NSInteger)_userId;
++(NSMutableArray *) getPhotoFeedWithTags:(NSString *)_tags;
 
 @end

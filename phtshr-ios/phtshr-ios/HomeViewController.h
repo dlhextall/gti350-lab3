@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (nonatomic, strong) NSMutableArray *photoFeed;
 
 @end
