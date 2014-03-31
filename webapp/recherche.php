@@ -17,6 +17,7 @@ $dbh = DatabaseConnection::singleton();
         <title>PHOTOZ</title>       
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
         <link rel="stylesheet" type="text/css" href="recherche/styles.css"/>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<script src="js/modernizr.custom.70736.js"></script>
@@ -33,7 +34,15 @@ $dbh = DatabaseConnection::singleton();
 			
 			<div class="main">
 				<header class="clearfix">
-
+					<?php  
+						if (login_check($dbh->get()) == true) {
+						  $html = '<div id="user_connected"><a href="profile.php"><h3>'.$_SESSION['username'].'</h3></a>  |  <a href="logout.php"><h3>Déconnexion</h3></a></div>';						  
+						}
+						else{
+							$html = '<div id="connexion"><a href="#"><h3>CONNEXION</h3></a></div>';							
+						}
+						echo $html;
+					?>
 					<div id="logo">
 						<a id="lien" href="index.php">
 							<img src="images/logo/logo.jpg" alt="img03"/>
@@ -125,6 +134,7 @@ $dbh = DatabaseConnection::singleton();
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/gamma.js"></script>
 		<script src="js/RechercheScript.js"></script>
+		<script src="js/scroll.js"></script>
 		<script type="text/javascript">
 
 			
