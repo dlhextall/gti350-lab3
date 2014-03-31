@@ -68,8 +68,7 @@ $dbh = DatabaseConnection::singleton();
 						<?php 													
 
 							if(!$input == ""){
-								$input = strip_tags( $input ); 
-								$input = mysql_real_escape_string( $input ); 
+								$input = strip_tags( $input ); 								 
 								$input = trim( $input );
 
 								$stmt = $dbh->get()->prepare("SELECT * FROM photo WHERE LOWER(p_tags) LIKE '%$input%' OR LOWER(p_description) LIKE '%$input%'");
