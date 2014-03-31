@@ -134,6 +134,7 @@ $dbh = DatabaseConnection::singleton();
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/gamma.js"></script>
 		<script src="js/RechercheScript.js"></script>
+		<script src="js/scroll.js"></script>
 		<script type="text/javascript">
 
 			
