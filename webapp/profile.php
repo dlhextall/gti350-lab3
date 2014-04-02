@@ -77,48 +77,54 @@ else{
 						<?php echo ('<h3 class="img_profile">Nom : '.$user[0]->u_first_name.' '.$user[0]->u_last_name.'</h3>') ?>
 						<?php echo ('<h3 class="img_profile">Nombre d\'images : '.$nbElement.'</h3>') ?>
 						<?php echo ('<h3 class="img_profile">Nombre de favoris : '.$nbFavoris.'</h3>') ?>
-						<div id="mes_photos">MES PHOTOS</div>
-						<div id="mes_favoris">MES FAVORIS</div>
+						<a href="profile.php"><div id="mes_photos">MES PHOTOS</div></a>
+
+						<a href="profile.php?choix=favoris"><div id="mes_favoris">MES FAVORIS</div></a>
 					</div>
 					<div  class="gamma-container gamma-loading" id="gamma-container">				
 						<ul class="gamma-gallery">
 
 							<?php 								
-																
-									if($nbElement > 0){
-										foreach ($images as $image) {
-											$html = '<li class="fisrt">';
-											$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="1300"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="1000"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="700"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="300"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="200"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="140"></div>';
-											$html.= '<div data-src="'.$image->p_url.'"></div>';
-											$html.= '<noscript><img src="'.$image->p_url.'" alt="img03"/></noscript>';
-											$html.= '</li>';
+									if(!isset($_GET['choix'])){
+										if($nbElement > 0){
+											foreach ($images as $image) {
+												$html = '<li class="fisrt">';
+												$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="1300"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="1000"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="700"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="300"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="200"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="140"></div>';
+												$html.= '<div data-src="'.$image->p_url.'"></div>';
+												$html.= '<noscript><img src="'.$image->p_url.'" alt="img03"/></noscript>';
+												$html.= '</li>';
 
-											echo $html;
-										}	
-									}
-									/*if($nbFavoris > 0){
-										foreach ($favoris as $image) {
-											$html = '<li class="second">';
-											$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="1300"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="1000"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="700"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="300"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="200"></div>';
-											$html.= '<div data-src="'.$image->p_url.'" data-min-width="140"></div>';
-											$html.= '<div data-src="'.$image->p_url.'"></div>';
-											$html.= '<noscript><img src="'.$image->p_url.'" alt="img03"/></noscript>';
-											$html.= '</li>';
+												echo $html;
+											}	
+										}
+									}						
+									
+									else if(isset($_GET['choix'])){
+										if($nbFavoris > 0){
+											foreach ($favoris as $image) {
+												$html = '<li class="second">';
+												$html.= '<div data-alt="img'.$image->p_url.'" data-description="<h3>'.$image->p_description.'</h3>" data-max-width="1800" data-max-height="1350">';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="1300"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="1000"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="700"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="300"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="200"></div>';
+												$html.= '<div data-src="'.$image->p_url.'" data-min-width="140"></div>';
+												$html.= '<div data-src="'.$image->p_url.'"></div>';
+												$html.= '<noscript><img src="'.$image->p_url.'" alt="img03"/></noscript>';
+												$html.= '</li>';
 
-											echo $html;
-										}	
-									}*/
+												echo $html;
+											}	
+										}
+									}	
+									
 
 							?>
 						</ul>
