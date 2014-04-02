@@ -9,17 +9,20 @@
             <objects>
                 <viewController storyboardIdentifier="homeView" id="gkJ-ZJ-ZsS" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="p3O-qt-PMi"/>
-                        <viewControllerLayoutGuide type="bottom" id="cIs-bq-pE3"/>
+                        <viewControllerLayoutGuide type="top" id="tU1-3R-U8j"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZb-AV-jq8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MJz-QC-ngv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-0z-jnc">
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-0z-jnc">
                                 <rect key="frame" x="0.0" y="19" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gkJ-ZJ-ZsS" id="54Z-UY-Ng0"/>
+                                </connections>
                             </searchBar>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-AF-6sb">
                                 <rect key="frame" x="0.0" y="63" width="320" height="459"/>
@@ -69,6 +72,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="HomeIcon" id="onf-W8-M6R"/>
                     <connections>
+                        <outlet property="collectionViewPhotoFeed" destination="pQc-AF-6sb" id="r82-Xw-iEr"/>
+                        <outlet property="searchBarView" destination="SdC-0z-jnc" id="fxX-0N-nz9"/>
                         <outlet property="searchDisplayController" destination="uAt-BT-77G" id="C1z-jj-1gT"/>
                     </connections>
                 </viewController>
@@ -76,7 +81,6 @@
                 <searchDisplayController id="uAt-BT-77G">
                     <connections>
                         <outlet property="delegate" destination="gkJ-ZJ-ZsS" id="kkN-rm-hZH"/>
-                        <outlet property="searchBar" destination="SdC-0z-jnc" id="vtQ-W8-gvL"/>
                         <outlet property="searchContentsController" destination="gkJ-ZJ-ZsS" id="b4k-T1-H5c"/>
                         <outlet property="searchResultsDataSource" destination="gkJ-ZJ-ZsS" id="rTG-th-TDP"/>
                         <outlet property="searchResultsDelegate" destination="gkJ-ZJ-ZsS" id="sN7-wp-e7d"/>
@@ -110,12 +114,32 @@
             <objects>
                 <viewController storyboardIdentifier="uploadView" id="fuH-aS-9LC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ff3-Ax-sid"/>
-                        <viewControllerLayoutGuide type="bottom" id="fcv-wN-gNx"/>
+                        <viewControllerLayoutGuide type="top" id="xvE-wd-wv6"/>
+                        <viewControllerLayoutGuide type="bottom" id="8bp-oF-Pat"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8h4-Bj-zUb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nD-mn-sO4">
+                                <rect key="frame" x="0.0" y="20" width="320" height="447"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mX6-79-hUo">
+                                <rect key="frame" x="43" y="478" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxH-vE-e63">
+                                <rect key="frame" x="188" y="478" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="PlusIcon" id="M8g-BL-Qg2"/>
@@ -129,8 +153,8 @@
             <objects>
                 <viewController storyboardIdentifier="profileView" id="ygP-6E-uos" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8S6-2c-Ox8"/>
-                        <viewControllerLayoutGuide type="bottom" id="YyJ-Kz-qv1"/>
+                        <viewControllerLayoutGuide type="top" id="V49-tk-5gn"/>
+                        <viewControllerLayoutGuide type="bottom" id="QrW-3h-cpZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="A9I-Zj-Dki">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -219,7 +243,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SHk-gi-UHI">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myFavoritesViewCell" id="SHk-gi-UHI">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

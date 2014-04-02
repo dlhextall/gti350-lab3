@@ -15,6 +15,7 @@
 		39420F9418E74475004338C5 /* MyPhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F9318E74475004338C5 /* MyPhotoViewCell.m */; };
 		39420F9718E8C8BE004338C5 /* Webservices.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F9618E8C8BE004338C5 /* Webservices.m */; };
 		39420F9A18E92CE3004338C5 /* HomePhotoFeedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F9918E92CE3004338C5 /* HomePhotoFeedViewCell.m */; };
+		398ABFD718EC650E00654277 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398ABFD618EC650E00654277 /* UploadViewController.m */; };
 		39F7E26E18D1159C00147D9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F7E26D18D1159C00147D9C /* Foundation.framework */; };
 		39F7E27018D1159C00147D9C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F7E26F18D1159C00147D9C /* CoreGraphics.framework */; };
 		39F7E27218D1159C00147D9C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F7E27118D1159C00147D9C /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 		39420F9618E8C8BE004338C5 /* Webservices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Webservices.m; sourceTree = "<group>"; };
 		39420F9818E92CE3004338C5 /* HomePhotoFeedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePhotoFeedViewCell.h; path = ../HomePhotoFeedViewCell.h; sourceTree = "<group>"; };
 		39420F9918E92CE3004338C5 /* HomePhotoFeedViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePhotoFeedViewCell.m; path = ../HomePhotoFeedViewCell.m; sourceTree = "<group>"; };
+		398ABFD518EC650E00654277 /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		398ABFD618EC650E00654277 /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
 		39F7E26A18D1159C00147D9C /* phtshr-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "phtshr-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F7E26D18D1159C00147D9C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39F7E26F18D1159C00147D9C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,6 +146,8 @@
 				39420F9018E627F0004338C5 /* HomeViewController.m */,
 				39F7E28518D1159C00147D9C /* Images.xcassets */,
 				39145EA318D1284100D10FB9 /* Main.storyboard */,
+				398ABFD518EC650E00654277 /* UploadViewController.h */,
+				398ABFD618EC650E00654277 /* UploadViewController.m */,
 				39420F8318E61F8F004338C5 /* MyPhoto.h */,
 				39420F8418E61F8F004338C5 /* MyPhoto.m */,
 				39420F9218E74475004338C5 /* MyPhotoViewCell.h */,
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39420F8518E61F8F004338C5 /* MyPhoto.m in Sources */,
+				398ABFD718EC650E00654277 /* UploadViewController.m in Sources */,
 				39420F9718E8C8BE004338C5 /* Webservices.m in Sources */,
 				39420F9A18E92CE3004338C5 /* HomePhotoFeedViewCell.m in Sources */,
 				393048DF18E609F3008C44E9 /* AppUser.m in Sources */,

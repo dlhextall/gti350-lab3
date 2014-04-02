@@ -58,14 +58,23 @@
 }
 
 - (void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text {
-    NSLog(@"searching...");
     if (text.length > 0) {
         self.photoFeed = [Webservices getPhotoFeedWithTags:text];
     } else {
         self.photoFeed = [Webservices getPhotoFeed];
     }
     
-    
+    [self.collectionViewPhotoFeed reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    [self.view endEditing:YES];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    [self.view endEditing:YES];
 }
 
 /*

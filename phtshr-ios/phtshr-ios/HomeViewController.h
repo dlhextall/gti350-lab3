@@ -11,5 +11,7 @@
 @interface HomeViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *photoFeed;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionViewPhotoFeed;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBarView;
 
 @end
