@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3911248318EC8D41004BDC73 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911248218EC8D41004BDC73 /* Security.framework */; };
+		3911248518EC8D46004BDC73 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911248418EC8D46004BDC73 /* QuartzCore.framework */; };
 		39145EA518D1284100D10FB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39145EA318D1284100D10FB9 /* Main.storyboard */; };
 		393048DF18E609F3008C44E9 /* AppUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 393048DE18E609F3008C44E9 /* AppUser.m */; };
+		3934D52E18ECA03500712C6B /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3934D52D18ECA03500712C6B /* DropboxSDK.framework */; };
 		39420F8518E61F8F004338C5 /* MyPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F8418E61F8F004338C5 /* MyPhoto.m */; };
 		39420F8E18E6255E004338C5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F8D18E6255E004338C5 /* ProfileViewController.m */; };
 		39420F9118E627F0004338C5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39420F9018E627F0004338C5 /* HomeViewController.m */; };
@@ -42,9 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3911248218EC8D41004BDC73 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3911248418EC8D46004BDC73 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		39145EA418D1284100D10FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		393048DD18E609F3008C44E9 /* AppUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUser.h; sourceTree = "<group>"; };
 		393048DE18E609F3008C44E9 /* AppUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUser.m; sourceTree = "<group>"; };
+		3934D52D18ECA03500712C6B /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../../../../Downloads/dropbox-ios-sdk-1.3.11/DropboxSDK.framework"; sourceTree = "<group>"; };
 		39420F8318E61F8F004338C5 /* MyPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPhoto.h; sourceTree = "<group>"; };
 		39420F8418E61F8F004338C5 /* MyPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPhoto.m; sourceTree = "<group>"; };
 		39420F8C18E6255E004338C5 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3934D52E18ECA03500712C6B /* DropboxSDK.framework in Frameworks */,
+				3911248518EC8D46004BDC73 /* QuartzCore.framework in Frameworks */,
+				3911248318EC8D41004BDC73 /* Security.framework in Frameworks */,
 				39F7E27018D1159C00147D9C /* CoreGraphics.framework in Frameworks */,
 				39F7E27218D1159C00147D9C /* UIKit.framework in Frameworks */,
 				39F7E26E18D1159C00147D9C /* Foundation.framework in Frameworks */,
@@ -125,6 +134,9 @@
 		39F7E26C18D1159C00147D9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3934D52D18ECA03500712C6B /* DropboxSDK.framework */,
+				3911248418EC8D46004BDC73 /* QuartzCore.framework */,
+				3911248218EC8D41004BDC73 /* Security.framework */,
 				39F7E26D18D1159C00147D9C /* Foundation.framework */,
 				39F7E26F18D1159C00147D9C /* CoreGraphics.framework */,
 				39F7E27118D1159C00147D9C /* UIKit.framework */,
@@ -424,6 +436,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/davidlafrance/Downloads/dropbox-ios-sync-sdk-2.1.1",
+					"/Users/davidlafrance/Downloads/dropbox-ios-sdk-1.3.11",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "phtshr-ios/phtshr-ios-Prefix.pch";
 				INFOPLIST_FILE = "phtshr-ios/phtshr-ios-Info.plist";
@@ -437,6 +455,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/davidlafrance/Downloads/dropbox-ios-sync-sdk-2.1.1",
+					"/Users/davidlafrance/Downloads/dropbox-ios-sdk-1.3.11",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "phtshr-ios/phtshr-ios-Prefix.pch";
 				INFOPLIST_FILE = "phtshr-ios/phtshr-ios-Info.plist";

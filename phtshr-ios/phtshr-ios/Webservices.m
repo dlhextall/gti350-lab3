@@ -81,7 +81,7 @@
 }
 
 +(NSMutableArray *) getPhotoFeedWithUserId:(NSInteger)_userId {
-    NSString *urlString = [[NSString alloc] initWithFormat:@"http://local.photoz.com/webservices/photoFeed.php?user_id=%ld", (long)_userId];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"http://gti350-lab3.herokuapp.com/webservices/photoFeed.php?user_id=%ld", (long)_userId];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
     
     NSError *error = [[NSError alloc] init];
@@ -104,7 +104,7 @@
 }
 
 +(NSMutableArray *) getPhotoFeedWithTags:(NSString *)_tags {
-    NSString *urlString = [[NSString alloc] initWithFormat:@"http://local.photoz.com/webservices/photoFeed.php?p_tags=%@", _tags];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"http://gti350-lab3.herokuapp.com/webservices/photoFeed.php?p_tags=%@", _tags];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
     
     NSError *error = [[NSError alloc] init];

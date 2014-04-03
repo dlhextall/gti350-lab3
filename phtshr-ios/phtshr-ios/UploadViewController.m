@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    session = [[DBSession alloc] initWithAppKey:@"2yflh405in3hdp6" appSecret:@"691ucbfqau84rel" root:kDBRootDropbox];
+    [DBSession setSharedSession:session];
+    restClient = [[DBRestClient alloc] initWithSession:session];
+    
     
 }
 
@@ -46,5 +50,36 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)btnTakePhoto:(UIButton *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (IBAction)btnSelectPhoto:(UIButton *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.imageView.image = chosenImage;
+    
+    [session linkFromController:self];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
